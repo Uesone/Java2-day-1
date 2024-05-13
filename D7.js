@@ -34,9 +34,33 @@ console.log(arrayCasuale);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+const arrayNumerico = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function trovaPari(arrayNumerico) {
+  return arrayNumerico.filter((numero) => numero % 2 === 0);
+}
+
+const arrayPari = trovaPari(arrayNumerico);
+console.log(arrayPari);
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+function sommaArray(array) {
+  let somma = 0;
+  let numero;
+
+  array.forEach(function (elemento) {
+    numero = elemento;
+    somma += numero;
+  });
+
+  return somma;
+}
+
+const risultato = sommaArray(arrayNumerico);
+console.log(risultato);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
