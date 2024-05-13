@@ -17,6 +17,18 @@ concatenazione(nome, cognome);
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+function randomArray() {
+  const arrayCasuale = [];
+  for (let i = 0; i < 10; i++) {
+    const valoreCasuale = Math.floor(Math.random() * 101);
+    arrayCasuale.push(valoreCasuale);
+  }
+
+  return arrayCasuale;
+}
+
+const arrayCasuale = randomArray();
+console.log(arrayCasuale);
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
